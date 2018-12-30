@@ -1,0 +1,16 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-block-floating-callout  {
+  background: $red;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 2rem;
+margin-right: 0;
+  width: 50%;
+float: right;
+  padding: 2rem;
+}

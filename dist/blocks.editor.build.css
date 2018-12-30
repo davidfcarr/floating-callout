@@ -1,0 +1,29 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-cgb-block-floating-callout {
+  background: #bada55;
+  border: 0.2rem solid #292929;
+  color: #292929;
+  padding: 2rem;
+  margin-top: 0px; }
+
+.lipsum {
+  color: #999; }
+
+.calloutwrapper {
+  border: thin dotted #333; }
+
+.calloutheader {
+  padding: 20px;
+  background-color: gray;
+  padding: thin solid 111; }
