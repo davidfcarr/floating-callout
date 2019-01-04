@@ -1,11 +1,11 @@
 === Floating Callout ===
 Contributors: davidfcarr
-Donate: http://www.rsvpmaker.com
 Tags: gutenberg, block, formatting, callout, sidebar, float
 Donate link: http://rsvpmaker.com/
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 5.0
+Requires PHP: 5.3
 Tested up to: 5.0.2
 Stable tag: 1.0.0
 
@@ -13,11 +13,13 @@ Creates a Gutenberg block displayed float right or float left relative to other 
 
 == Description ==
 
-Creates a Gutenberg block displayed float right or float left relative to other content. You may set padding, margins, background color or background image.
+Creates a Gutenberg block displayed float right or float left relative to other content. You may set padding, margins, background color or background image, border style and border color.
 
-Borrows from techniques used in the Wrapper component of the [Editor Blocks](https://wordpress.org/plugins/editor-blocks/) plugin. Created using [Create Guten Block](https://github.com/ahmadawais/create-guten-block). 
+Useful for creating an information sidebar, such as an About the Author block within an article, or a callout such as an invitation to register for your webinar within an article on the same topic.
 
 Source code at [https://github.com/davidfcarr/floating-callout](https://github.com/davidfcarr/floating-callout)
+
+Borrows from techniques used in the Wrapper component of the [Editor Blocks](https://wordpress.org/plugins/editor-blocks/) plugin. Created using [Create Guten Block](https://github.com/ahmadawais/create-guten-block). 
 
 == Installation ==
 
@@ -25,6 +27,9 @@ Source code at [https://github.com/davidfcarr/floating-callout](https://github.c
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 
 == Screenshots ==
+
+1. A blog post with a callout or sidebar area promoting a book.
+2. In the editor, the post is displayed align right in approximately the same position. The placeholder banner (not displayed on the front end) makes it easier to click to select the floating content.
 
 == Credits ==
 

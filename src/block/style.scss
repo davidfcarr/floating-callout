@@ -16,9 +16,11 @@
 
 .wp-block-floating-callout-wrapper.left {
 	float: left;
+	margin-right: 10px;
 }
 .wp-block-floating-callout-wrapper.right {
 	float: right;
+	margin-left: 10px;
 }
 
 .wp-block-floating-callout-wrapper.gradient:before {

@@ -37,6 +37,17 @@ export default class Inspector extends Component {
 							] }
 						/> }
 				</PanelBody>
+				<PanelColorSettings
+					title={ __( 'Background Color' ) }
+					colorSettings={ [
+						{
+							value: attributes.backgroundColor,
+							onChange: ( backgroundColor ) => setAttributes( { backgroundColor } ),
+							label: __( 'Background Color', 'floating-callout' ),
+						},
+					] }
+				>
+				</PanelColorSettings>
 				<PanelBody title={ __( 'Background Image', 'floating-callout' ) } >
 					{ !! attributes.backgroundImage &&
 						<MediaUpload
@@ -82,17 +93,6 @@ export default class Inspector extends Component {
 						step={ 10 }
 					/>
 				</PanelBody>
-				<PanelColorSettings
-					title={ __( 'Color Settings' ) }
-					colorSettings={ [
-						{
-							value: attributes.backgroundColor,
-							onChange: ( backgroundColor ) => setAttributes( { backgroundColor } ),
-							label: __( 'Background Color', 'floating-callout' ),
-						},
-					] }
-				>
-				</PanelColorSettings>
 				<PanelBody initialOpen={ true } title={ __( 'Padding', 'floating-callout' ) }>
 					<RangeControl
 						value={ attributes.paddingTop }
@@ -139,6 +139,66 @@ export default class Inspector extends Component {
 						max={ 250 }
 					/>
 				</PanelBody>
+				<PanelBody initialOpen={ true } title={ __( 'Border', 'floating-callout' ) }>
+						<SelectControl
+							label={ __( 'Type', 'floating-callout' ) }
+							value={ attributes.bordertype }
+							onChange={ ( bordertype ) => setAttributes( { bordertype } ) }
+							options={ [
+								{ value: '', label: __( 'None', 'floating-callout' ) },
+								{ value: 'left', label: __( 'Left', 'floating-callout' ) },
+								{ value: 'right', label: __( 'Right', 'floating-callout' ) },
+								{ value: 'all', label: __( 'All Sides', 'floating-callout' ) },
+							] }
+						/>
+						<SelectControl
+							label={ __( 'Width', 'floating-callout' ) }
+							value={ attributes.borderwidth }
+							onChange={ ( borderwidth ) => setAttributes( { borderwidth } ) }
+							options={ [
+								{ value: 'thin', label: __( 'Thin', 'floating-callout' ) },
+								{ value: 'medium', label: __( 'Medium', 'floating-callout' ) },
+								{ value: 'thick', label: __( 'Thick', 'floating-callout' ) },
+							] }
+						/>
+						<SelectControl
+							label={ __( 'Style', 'floating-callout' ) }
+							value={ attributes.borderstyle }
+							onChange={ ( borderstyle ) => setAttributes( { borderstyle } ) }
+							options={ [
+								{ value: 'solid', label: __( 'Solid', 'floating-callout' ) },
+								{ value: 'dashed', label: __( 'Dashed', 'floating-callout' ) },
+								{ value: 'dotted', label: __( 'Dotted', 'floating-callout' ) },
+								{ value: 'double', label: __( 'Double', 'floating-callout' ) },
+								{ value: 'groove', label: __( 'Groove', 'floating-callout' ) },
+								{ value: 'inset', label: __( 'Inset', 'floating-callout' ) },
+								{ value: 'ridge', label: __( 'Ridge', 'floating-callout' ) },
+							] }
+						/>
+						<SelectControl
+							label={ __( 'Rounding (Border Radius)', 'floating-callout' ) }
+							value={ attributes.borderRadius }
+							onChange={ ( borderRadius ) => setAttributes( { borderRadius } ) }
+							options={ [
+								{ value: '', label: __( 'None', 'floating-callout' ) },
+								{ value: '3px', label: __( 'Slight - 3px', 'floating-callout' ) },
+								{ value: '5px', label: __( 'Round - 5px', 'floating-callout' ) },
+								{ value: '10px', label: __( 'Rounder - 10px', 'floating-callout' ) },
+								{ value: '20px', label: __( 'Roundest - 20px', 'floating-callout' ) },
+							] }
+						/>
+				</PanelBody>
+				<PanelColorSettings
+					title={ __( 'Border Color' ) }
+					colorSettings={ [
+						{
+							value: attributes.borderColor,
+							onChange: ( borderColor ) => setAttributes( { borderColor } ),
+							label: __( 'Border Color', 'floating-callout' ),
+						},
+					] }
+				>
+				</PanelColorSettings>
 			</InspectorControls>
 		);
 	}

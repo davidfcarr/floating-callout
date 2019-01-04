@@ -23,7 +23,7 @@ const blockAttributes = {
 	},
 	paddingTop: {
 		type: 'number',
-		default: 0,
+		default: 10,
 	},
 	paddingRight: {
 		type: 'number',
@@ -41,15 +41,7 @@ const blockAttributes = {
 		type: 'number',
 		default: 0,
 	},
-	marginRight: {
-		type: 'number',
-		default: 0,
-	},
 	marginBottom: {
-		type: 'number',
-		default: 10,
-	},
-	marginLeft: {
 		type: 'number',
 		default: 10,
 	},
@@ -64,12 +56,32 @@ const blockAttributes = {
 		type: 'number',
 		default: 0,
 	},
+	bordertype: {
+		type: 'string',
+		default: '',
+	},
+	borderwidth: {
+		type: 'string',
+		default: 'thin',
+	},
+	borderstyle: {
+		type: 'string',
+		default: 'solid',
+	},
+	borderColor: {
+		type: 'string',
+		default: '#000000',
+	},
+	borderRadius: {
+		type: 'string',
+		default: '',
+	},
 };
 
 registerBlockType( 'floating-callout/wrapper', {
 	title: __( 'Floating Callout', 'floating-callout' ),
 	description: __( 'Create a block of text, aligned float: right or float: left. Add a background image or color, as well as padding and margins.', 'floating-callout' ),
-	icon: 'editor-contract',
+	icon: 'align-right',
 	category: 'common',
 	keywords: [
 		__( 'callout', 'floating-callout' ),
@@ -97,6 +109,16 @@ registerBlockType( 'floating-callout/wrapper', {
 			width: attributes.width !== 0 ? attributes.width + '%' : null,
 		};
 
+		if(attributes.bordertype == 'left')
+			wrapperStyle['borderLeft'] = attributes.borderwidth+' '+attributes.borderstyle+' '+attributes.borderColor;
+		else if(attributes.bordertype == 'right')
+			wrapperStyle['borderRight'] = attributes.borderwidth+' '+attributes.borderstyle+' '+attributes.borderColor;
+		else if(attributes.bordertype == 'all')
+			wrapperStyle['border'] = attributes.borderwidth+' '+attributes.borderstyle+' '+attributes.borderColor;
+
+		if(attributes.borderRadius)
+			wrapperStyle['borderRadius'] = attributes.borderRadius;		
+		
 		const classes = classnames(
 			className,
 			dimRatioToClass( attributes.backgroundOpacity ),
@@ -136,6 +158,16 @@ registerBlockType( 'floating-callout/wrapper', {
 			backgroundImage: attributes.backgroundImage && 'url(' + attributes.backgroundImage + ')',
 			width: attributes.width !== 0 ? attributes.width + '%' : null,
 		};
+
+		if(attributes.bordertype == 'left')
+			wrapperStyle['borderLeft'] = attributes.borderwidth+' '+attributes.borderstyle+' '+attributes.borderColor;
+		else if(attributes.bordertype == 'right')
+			wrapperStyle['borderRight'] = attributes.borderwidth+' '+attributes.borderstyle+' '+attributes.borderColor;
+		else if(attributes.bordertype == 'all')
+			wrapperStyle['border'] = attributes.borderwidth+' '+attributes.borderstyle+' '+attributes.borderColor;
+
+		if(attributes.borderRadius)
+			wrapperStyle['borderRadius'] = attributes.borderRadius;		
 
 		const classes = classnames(
 			className,

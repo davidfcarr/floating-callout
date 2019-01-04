@@ -19,10 +19,12 @@
 	*/ }
 
 .wp-block-floating-callout-wrapper.left {
-  float: left; }
+  float: left;
+  margin-right: 10px; }
 
 .wp-block-floating-callout-wrapper.right {
-  float: right; }
+  float: right;
+  margin-left: 10px; }
 
 .wp-block-floating-callout-wrapper.gradient:before {
   background: -webkit-linear-gradient(315deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 35%, rgba(0, 0, 0, 0) 100%);
