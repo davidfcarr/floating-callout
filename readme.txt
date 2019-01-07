@@ -7,13 +7,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 5.0
 Requires PHP: 5.3
 Tested up to: 5.0.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 Creates a Gutenberg block displayed float right or float left relative to other content. You may set padding, margins, background color or background image.
 
 == Description ==
 
 Creates a Gutenberg block displayed float right or float left relative to other content. You may set padding, margins, background color or background image, border style and border color.
+
+https://youtu.be/Wayzhve-g1g
 
 Useful for creating an information sidebar, such as an About the Author block within an article, or a callout such as an invitation to register for your webinar within an article on the same topic.
 
