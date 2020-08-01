@@ -6,8 +6,8 @@ License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 5.0
 Requires PHP: 5.3
-Tested up to: 5.0.2
-Stable tag: 1.0.1
+Tested up to: 5.5
+Stable tag: 1.0.2
 
 Creates a Gutenberg block displayed float right or float left relative to other content. You may set padding, margins, background color or background image.
 
@@ -51,6 +51,10 @@ Borrows from techniques used in the Wrapper component of the [Editor Blocks](htt
     See the GNU General Public License at <http://www.gnu.org/licenses/gpl-2.0.html>.
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Updated NPM modules
 
 = 1.0.0 =
 
